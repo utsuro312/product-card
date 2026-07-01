@@ -34,6 +34,7 @@ body {
   flex-flow: row wrap;
 }
 .product-card {
+  box-shadow: 1px 1px 10px 0px #5150761A;
   background-color: #F7F7FA;
   display: block;
   padding: 16px;
