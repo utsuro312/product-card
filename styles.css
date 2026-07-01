@@ -38,7 +38,6 @@ body {
   display: block;
   padding: 16px;
   width: 308px;
-  height: 541px;
   margin: 16px;
 }
 .product-card img{
@@ -67,11 +66,9 @@ body {
   padding: 0px 16px;
 }
 .product-card-price-box {
-  padding-top: 16px;
-}
-.product-card-price-box {
   width: 100%;
   padding-top: 8%;
+  padding-top: 16px;
   display: inline-flex;
   flex-flow: row nowrap;
   justify-content: space-between;
