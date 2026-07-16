@@ -2,7 +2,24 @@
   font-family: "Montserrat", sans-serif;
   font-optical-sizing: auto;
   font-style: normal;
-  color: #515076;
+  color: #515076; 
+}
+.button_panel {
+  margin: 150px;
+  text-align: center;
+}
+.button_panel button{
+  padding: 10px;
+  margin: 5px;
+  box-shadow: 1px 1px 10px 0px #5150761A;
+  color: #F7F7FA;
+  background-color: #515076;
+  border-radius: 10px;
+  border: none;
+}
+.button_panel__invertButtonColor_buttton__inverted_color {
+  color: #080805 !important;
+  background-color: #aeaf89 !important;
 }
 .products {
   justify-self: center;
