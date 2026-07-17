@@ -16,19 +16,19 @@ const turnFirstCardPink = document.querySelector('.button_panel__turnFirstCardPi
 
 turnFirstCardPink.addEventListener('click', () => {
   firstCard.style.backgroundColor = pinkColor;
-})
+});
 
 // Открыть Google в новой вкладке
 
 const newTabGoogleButton = document.querySelector('.button_panel__newTabGoogle_buttton');
 
-newTabGoogleButton.addEventListener('click', newTabGoogle)
+openNewGoogleTabButton.addEventListener('click', openNewGoogleTab);
 
-function newTabGoogle() {
-  const answer = confirm('Действительно ли Вы хотите открыть Google в новой вкладке?')
+function openNewGoogleTab() {
+  const answer = confirm('Действительно ли Вы хотите открыть Google в новой вкладке?');
 
   if (answer === true) {
-    window.open('https://www.google.com')
+    window.open('https://www.google.com');
   }
 }
 
@@ -36,7 +36,7 @@ function newTabGoogle() {
 
 const invertColorButton = document.querySelector('.button_panel__invertButtonColor_buttton');
 
-invertColorButton.addEventListener('click', invertButtonColorToggle)
+invertColorButton.addEventListener('click', invertButtonColorToggle);
 
 function invertButtonColorToggle() {
   invertColorButton.classList.toggle("button_panel__invertButtonColor_buttton__inverted_color");
@@ -47,7 +47,7 @@ function invertButtonColorToggle() {
 const productsSectionTitle = document.querySelector('.products__section_title');
 const elementText = document.querySelector('.products__section_title').innerText;
 
-productsSectionTitle.addEventListener('mouseover', displayElementContainmentInConsole)
+productsSectionTitle.addEventListener('mouseover', displayElementContainmentInConsole);
 
 function displayElementContainmentInConsole() {
   console.log(elementText);

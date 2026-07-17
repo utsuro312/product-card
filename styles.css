@@ -4,11 +4,13 @@
   font-style: normal;
   color: #515076; 
 }
+
 .button_panel {
   margin: 150px;
   text-align: center;
 }
-.button_panel button{
+
+.button_panel button {
   padding: 10px;
   margin: 5px;
   box-shadow: 1px 1px 10px 0px #5150761A;
@@ -17,10 +19,12 @@
   border-radius: 10px;
   border: none;
 }
+
 .button_panel__invertButtonColor_buttton__inverted_color {
   color: #080805 !important;
   background-color: #aeaf89 !important;
 }
+
 .products {
   justify-self: center;
   width: 1210px;
@@ -28,6 +32,7 @@
   background-image: url("Images/bg.png");
   background-repeat: no-repeat;
 }
+
 .products__section_title {
   margin-top: 10%;
   text-align: center;
@@ -39,6 +44,7 @@
   font-style: normal;
   color: #515076;
 }
+
 .products__list {
   justify-content: center;
   align-content: center;
@@ -47,6 +53,7 @@
   flex-flow: row wrap;
   gap: 32px;
 }
+
 .card {
   box-shadow: 1px 1px 10px 0px #5150761A;
   background-color: #F7F7FA;
@@ -54,32 +61,39 @@
   padding: 16px;
   width: 308px;
 }
+
 .card img{
   width: 100%;
 }
+
 .card__subheading {
   text-transform: uppercase;
   font-weight: 400;
   color: #A5A3B9;
   font-size: 12px;
 }
+
 .card__heading {
   font-size: 20px;
 }
+
 .card__description{
   font-size: 13px;
   padding: 8px 0px;
 }
+
 .card__composition_heading {
   font-size: 13px;
   font-weight: 400;
 }
+
 .card__composition_list {
   font-size: 13px;
   font-weight: 400;
   padding: 0px 16px;
   list-style: circle;
 }
+
 .card__price_box {
   width: 100%;
   padding-top: 8%;
