@@ -20,7 +20,7 @@ turnFirstCardPink.addEventListener('click', () => {
 
 // Открыть Google в новой вкладке
 
-const newTabGoogleButton = document.querySelector('.button_panel__newTabGoogle_buttton');
+const openNewGoogleTabButton = document.querySelector('.button_panel__newTabGoogle_buttton');
 
 openNewGoogleTabButton.addEventListener('click', openNewGoogleTab);
 
