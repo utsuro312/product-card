@@ -28,10 +28,10 @@ compareSpeedToLightSpeed(299792458, LIGHT_SPEED);
 // Пункт 5
 
 function buyMoisturizingMousse(productName, productPrice) {
-  if(budget >= productPrice) {
+  if (budget >= productPrice) {
     console.log(productName + " успешно приобретён. Спасибо за покупку!");
   } else
-  if(budget < productPrice) {
+  if (budget < productPrice) {
     console.log(`Вам не хватает ${productPrice - budget}$, пополните баланс.`);
   }
 }
