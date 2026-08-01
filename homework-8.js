@@ -26,7 +26,7 @@ console.log(car);
 
 // Задание 5, функция проверающая наличие maxSpeed и создающая его в случаи его отсутвтсвия
 
-function ifCarHasNoMaxSpeedAddMaxSpeedKey() {
+function addMaxSpeedIfNone() {
   if (!(car.hasOwnProperty("maxSpeed"))) {
     car.maxSpeed = "180 км/ч"
     console.log(car)
@@ -35,7 +35,7 @@ function ifCarHasNoMaxSpeedAddMaxSpeedKey() {
   }
 };
 
-ifCarHasNoMaxSpeedAddMaxSpeedKey();
+addMaxSpeedIfNone();
 
 // Задание 6, функция, получающая объект и аргумент
 
