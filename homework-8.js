@@ -47,29 +47,101 @@ displayArgumentOfObject(personProfileInfo, "country");
 
 // Задание 7, массив продуктов
 
-const products = ["Молоко", "Сахар", "Соль", "Яйца", "Сода"];
+const products = [
+  "Молоко",
+  "Сахар",
+  "Соль",
+  "Яйца",
+  "Сода"
+];
 
 console.log(products);
 
 // Задание 8, массив объектов (в моём случае автомобилей)
 
 const cars = [
- {model: "swift", brand: "Suzuki", manufactureCountry: "Япония", yearOfManufacture: 2010, color: "Серый"},
- {model: "civic", brand: "Honda", manufactureCountry: "Япония", yearOfManufacture: 1998, color: "Жёлтый"},
- {model: "lancer", brand: "Mitsubishi", manufactureCountry: "Япония", yearOfManufacture: 2016, color: "Чёрный"},
- {model: "accord", brand: "Honda", manufactureCountry: "Япония", yearOfManufacture: 2022, color: "Белый"},
- {model: "supra", brand: "Toyota", manufactureCountry: "Япония", yearOfManufacture: 2025, color: "Жёлтый"},
- {model: "nsx", brand: "Honda", manufactureCountry: "Япония", yearOfManufacture: 2001, color: "Белый"},
- {model: "camry", brand: "Toyota", manufactureCountry: "Япония", yearOfManufacture: 2023, color: "Чёрный"}
+  {
+    model: "swift",
+    brand: "Suzuki",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2010,
+    color: "Серый"
+  },
+  {
+    model: "civic",
+    brand: "Honda",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 1998,
+    color: "Жёлтый"
+  },
+  {
+    model: "lancer",
+    brand: "Mitsubishi",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2016,
+    color: "Чёрный"
+  },
+  {
+    model: "accord",
+    brand: "Honda",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2022,
+    color: "Белый"
+  },
+  {
+    model: "supra",
+    brand: "Toyota",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2025,
+    color: "Жёлтый"
+  },
+  {
+    model: "nsx",
+    brand: "Honda",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2001,
+    color: "Белый"
+  },
+  {
+    model: "camry",
+    brand: "Toyota",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2023,
+    color: "Чёрный"
+  }
 ];
 
 // Задание 9, другой массив объектов (в мойм случае автомобилей), только Subaru, и их объеденение в один новый
 
 const subaruCars = [
-  {model: "impreza", brand: "Subaru", manufactureCountry: "Япония", yearOfManufacture: 2007, color: "Синий"},
-  {model: "brz", brand: "Subaru", manufactureCountry: "Япония", yearOfManufacture: 2019, color: "Синий"},
-  {model: "exiga", brand: "Subaru", manufactureCountry: "Япония", yearOfManufacture: 2015, color: "Синий"},
-  {model: "wrx", brand: "Subaru", manufactureCountry: "Япония", yearOfManufacture: 2014, color: "Синий"}
+  {
+    model: "impreza",
+    brand: "Subaru",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2007,
+    color: "Синий"
+  },
+  {
+    model: "brz",
+    brand: "Subaru",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2019,
+    color: "Синий"
+  },
+  {
+    model: "exiga",
+    brand: "Subaru",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2015,
+    color: "Синий"
+  },
+  {
+    model: "wrx",
+    brand: "Subaru",
+    manufactureCountry: "Япония",
+    yearOfManufacture: 2014,
+    color: "Синий"
+  }
 ];
 
 const allCars = [
@@ -83,13 +155,13 @@ console.log(allCars);
 
 allCars.map(getCarsArray);
 
-function getCarsArray(item) {
-  if (item.yearOfManufacture >= 2014) {
-    item.isNew = "Yes"
+function getCarsArray(car) {
+  if (car.yearOfManufacture >= 2014) {
+    car.isNew = "Yes"
   } else {
-    item.isNew = "No"
+    car.isNew = "No"
   }
-  return [item.brand,item.manufactureCountry,item.yearOfManufacture,item.color];
+  return [car.brand,car.manufactureCountry,car.yearOfManufacture,car.color];
 };
 
 console.log(getCarsArray);
