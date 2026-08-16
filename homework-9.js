@@ -1,3 +1,7 @@
+// Уровень 1
+
+import { userComments } from "./comments.js";
+
 const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
 const numbersFromFive = numbers.filter((number) => number >= 5);
 
@@ -26,7 +30,6 @@ const stuff = [
   },
 ];
 
-// Checks whether an element is even
 const hasFurniture = (object) => object.type === "furniture";
 
 console.log(stuff.some(hasFurniture));
@@ -38,39 +41,37 @@ function reverseMassive(massive) {
 reverseMassive(stuff);
 reverseMassive(numbers);
 
-//const hasCom = (object) => object.type = ".com";
-
-import { userComments } from "./comments.js";
+// Уровень 2
 
 const userCommentsWithCom = userComments.filter((comment) => comment.email.endsWith(".com"));
 
-console.log(userCommentsWithCom)
+console.log(userCommentsWithCom);
 
-function rearrangePostId(comment) {
-  comment.id <= 5 ? comment.postId = 2 : comment.postId = 1
-  return [comment.id,comment.postId,comment.name,comment.email,comment.body];
-}
+const userCommentsWithChangedPostId = userComments.map((comment) => 
+  {
+    comment.id <= 5 ? comment.postId = 2 : comment.postId = 1
+    return [comment.id,comment.postId,comment.name,comment.email,comment.body];
+  }
+);
 
-const userCommentsWithChangedPostId = userComments.map(rearrangePostId)
+console.log("comments with changed postId: ", userCommentsWithChangedPostId);
 
-console.log(userCommentsWithChangedPostId)
+const userCommentsWithOnlyNameId = userComments.map((comment) => 
+  {
+    return [comment.id,comment.name];
+  }
+);
 
-function removeEverythingExceptNameId(comment) {
-  return [comment.id,comment.name];
-}
+console.log("comments with only name and id: ", userCommentsWithOnlyNameId);
 
-const userCommentsWithOnlyNameId = userComments.map(removeEverythingExceptNameId)
+const userCommentsWithIsInvalid = userComments.map((comment) => 
+ {
+  comment.body.length > 180 ? comment.isInvalid = true : comment.isInvalid = false;
+  return [comment.id,comment.postId,comment.name,comment.email,comment.body,comment.isInvalid];
+ }
+);
 
-console.log(userCommentsWithOnlyNameId)
-
-function setIsValid(comment) {
-  comment.body.length < 180 ? comment.isValid = true : comment.isValid = false;
-  return [comment.id,comment.postId,comment.name,comment.email,comment.body,comment.isValid];
-}
-
-const userCommentsWithIsValid = userComments.map(setIsValid)
-
-console.log(userCommentsWithIsValid)
+console.log("comments with isInvalid: ", userCommentsWithIsInvalid);
 
 const userEmailsReduce = userComments.reduce((acc, userComment) => {
   const commentClone = {...userComment};
@@ -78,20 +79,22 @@ const userEmailsReduce = userComments.reduce((acc, userComment) => {
   delete commentClone.id;
   delete commentClone.body;
   delete commentClone.postId;
-  delete commentClone.isValid;
+  delete commentClone.isInvalid;
   acc.push(commentClone);
   return acc;
 },[]);
 
-console.log("emails:", userEmailsReduce)
+// Уровень 3
+
+console.log("emails:", userEmailsReduce);
 
 const userEmailsMap = userComments.map((userComment) => {
   const commentClone = {...userComment};
   return [userComment.email];
 });
 
-console.log("emails:", userEmailsMap)
+console.log("emails:", userEmailsMap);
 
-const userEmailsString = userEmailsMap.toString();;
+const userEmailsString = userEmailsMap.toString();
 
-console.log("emails:", userEmailsString)
+console.log("emails:", userEmailsString);
