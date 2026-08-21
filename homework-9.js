@@ -47,40 +47,35 @@ const userCommentsWithCom = userComments.filter((comment) => comment.email.endsW
 
 console.log(userCommentsWithCom);
 
-const userCommentsWithChangedPostId = userComments.map((comment) => 
-  {
-    comment.id <= 5 ? comment.postId = 2 : comment.postId = 1
-    return [comment.id,comment.postId,comment.name,comment.email,comment.body];
+const userCommentsWithChangedPostId = userComments.map((comment) => {
+  return {
+    ...comment,
+    postId: comment.id <= 5 ?  2 :  1
   }
-);
+});
 
 console.log("comments with changed postId: ", userCommentsWithChangedPostId);
 
-const userCommentsWithOnlyNameId = userComments.map((comment) => 
-  {
-    return [comment.id,comment.name];
+const userCommentNames = userComments.map((comment) => {
+  return {
+    id: comment.id,
+    name: comment.name
   }
-);
+});
 
-console.log("comments with only name and id: ", userCommentsWithOnlyNameId);
+console.log("comments with only name and id: ", userCommentNames);
 
-const userCommentsWithIsInvalid = userComments.map((comment) => 
- {
-  comment.body.length > 180 ? comment.isInvalid = true : comment.isInvalid = false;
-  return [comment.id,comment.postId,comment.name,comment.email,comment.body,comment.isInvalid];
- }
-);
+const userCommentsWithIsInvalid = userComments.map((comment) => {
+  return {
+    ...comment,
+    isInvalid:  comment.body.length > 180 ? true : false
+  }
+});
 
 console.log("comments with isInvalid: ", userCommentsWithIsInvalid);
 
 const userEmailsReduce = userComments.reduce((acc, userComment) => {
-  const commentClone = {...userComment};
-  delete commentClone.name;
-  delete commentClone.id;
-  delete commentClone.body;
-  delete commentClone.postId;
-  delete commentClone.isInvalid;
-  acc.push(commentClone);
+  acc.push(userComment.email);
   return acc;
 },[]);
 
@@ -89,8 +84,7 @@ const userEmailsReduce = userComments.reduce((acc, userComment) => {
 console.log("emails:", userEmailsReduce);
 
 const userEmailsMap = userComments.map((userComment) => {
-  const commentClone = {...userComment};
-  return [userComment.email];
+  return userComment.email;
 });
 
 console.log("emails:", userEmailsMap);
