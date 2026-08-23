@@ -77,7 +77,7 @@ console.log("comments with isInvalid: ", userCommentsWithIsInvalid);
 const userEmailsReduce = userComments.reduce((acc, userComment) => {
   acc.push(userComment.email);
   return acc;
-},[]);
+}, []);
 
 // Уровень 3
 
