@@ -1,51 +1,57 @@
+const moisturizing_mousse = 'Images/moisturizing_mousse.png'
+const moisturizing_mask = 'Images/moisturizing_mask.png'
+const showering_gel = 'Images/showering_gel.png'
+const gift_package_1 = 'Images/gift_package_1.png'
+const gift_package_5 = 'Images/gift_package_5.png'
+
 const cards = [
   {
-    image_path: 'Images/moisturizing_mousse.png',
-    subheading_text: 'Для нормальной кожи',
-    heading_text: 'Увлажняющий мусс',
-    description_text: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',
-    price_value: '2 750 ₽',
+    imageName: moisturizing_mousse,
+    subheadingText: 'Для нормальной кожи',
+    headingText: 'Увлажняющий мусс',
+    descriptionText: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',
+    priceValue: 2750,
     composition: ['активные натуральные комплексы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты']
   },
   {
-    image_path: 'Images/moisturizing_mask.png',
-    subheading_text: 'Для нормальной кожи',
-    heading_text: 'Увлажняющая маска',
-    description_text: 'Способствует удерживанию влаги в верхних слоях кожи.',
-    price_value: '3 500 ₽',
+    imageName: moisturizing_mask,
+    subheadingText: 'Для нормальной кожи',
+    headingText: 'Увлажняющая маска',
+    descriptionText: 'Способствует удерживанию влаги в верхних слоях кожи.',
+    priceValue: 3500,
     composition: ['воски', 'минералы', 'масла']
   },
   {
-    image_path: 'Images/showering_gel.png',
-    subheading_text: 'Для нормальной кожи',
-    heading_text: 'Гель для умывания',
-    description_text: 'Интенсивно очищает, не повреждает защитный барьер кожи.',
-    price_value: '1 650 ₽',
+    imageName: showering_gel,
+    subheadingText: 'Для нормальной кожи',
+    headingText: 'Гель для умывания',
+    descriptionText: 'Интенсивно очищает, не повреждает защитный барьер кожи.',
+    priceValue: 1650,
     composition: ['минералы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты']
   },
   {
-    image_path: 'Images/gift_package_1.png',
-    subheading_text: 'Для нормальной кожи',
-    heading_text: 'Подарочный набор №1',
-    description_text: 'Набор, состоящий из увлажняющего крема и маски.',
-    price_value: '4 750 ₽',
+    imageName: gift_package_1,
+    subheadingText: 'Для нормальной кожи',
+    headingText: 'Подарочный набор №1',
+    descriptionText: 'Набор, состоящий из увлажняющего крема и маски.',
+    priceValue: 4750,
     composition: ['воски', 'минералы', 'масла']
   },
   {
-    image_path: 'Images/gift_package_5.png',
-    subheading_text: 'Для нормальной кожи',
-    heading_text: 'Подарочный набор №5',
-    description_text: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.',
-    price_value: '7 520 ₽',
+    imageName: gift_package_5,
+    subheadingText: 'Для нормальной кожи',
+    headingText: 'Подарочный набор №5',
+    descriptionText: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.',
+    priceValue: 7520,
     composition: ['воски', 'минералы', 'масла']
   }
 ]
 
 const cardsNameDescription = cards.reduce((acc, item) => {
-  if(acc[`${item.heading_text}`]) {
-    acc[`${item.heading_text}`].push(item.description_text);
+  if(acc[`${item.headingText}`]) {
+    acc[`${item.headingText}`].push(item.descriptionText);
   } else {
-    acc[`${item.heading_text}`] = [item.description_text];
+    acc[`${item.headingText}`] = [item.descriptionText];
   }
   return acc;
 }, {});
@@ -62,11 +68,11 @@ function showUpCards() {
     cards.splice(0,cardCount).forEach(card => {
       const clone = cardTemplate.content.cloneNode(true)
       
-      clone.querySelector('img').src = card.image_path;
-      clone.querySelector('.card__subheading').textContent = card.subheading_text;
-      clone.querySelector('.card__heading').textContent = card.heading_text;
-      clone.querySelector('.card__description').textContent = card.description_text;
-      clone.querySelector('.card__price_value').textContent = card.price_value;
+      clone.querySelector('img').src = card.imageName;
+      clone.querySelector('.card__subheading').textContent = card.subheadingText;
+      clone.querySelector('.card__heading').textContent = card.headingText;
+      clone.querySelector('.card__description').textContent = card.descriptionText;
+      clone.querySelector('.card__price_value').textContent = `${card.priceValue} ₽`;
       
       const list = clone.querySelector('.card__composition_list');
       list.innerHTML = '';
