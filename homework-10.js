@@ -1,12 +1,9 @@
 import { cards } from "./cards.js";
 
-let array = [];
-
 const cardsNameDescription = cards.reduce((acc, item) => {
-  acc[`${item.headingText}`] ? acc[`${item.headingText}`].push(item.descriptionText) : acc =  {[`${item.headingText}`]:`${item.descriptionText}`};
-  array.push(acc);
-  return array;
-}, {});
+  acc[`${item.headingText}`] ? acc[`${item.headingText}`].push(item.descriptionText) : acc[`${item.headingText}`] = item.descriptionText;
+  return acc;
+}, []);
 
 console.log(cardsNameDescription);
 
@@ -19,8 +16,9 @@ function showUpCards() {
   if (cardCount >= 1 && cardCount <= 5) {
     cards.splice(0,cardCount).forEach(card => {
       const clone = cardTemplate.content.cloneNode(true);
-      
-      clone.querySelector('img').src = card.imageName;
+      const targetPath = `Images/${card.imageName}.png`
+
+      clone.querySelector('img').src = targetPath;
       clone.querySelector('.card__subheading').textContent = card.subheadingText;
       clone.querySelector('.card__heading').textContent = card.headingText;
       clone.querySelector('.card__description').textContent = card.descriptionText;

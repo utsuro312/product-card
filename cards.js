@@ -1,12 +1,6 @@
-const moisturizing_mousse = 'Images/moisturizing_mousse.png'
-const moisturizing_mask = 'Images/moisturizing_mask.png'
-const showering_gel = 'Images/showering_gel.png'
-const gift_package_1 = 'Images/gift_package_1.png'
-const gift_package_5 = 'Images/gift_package_5.png'
-
 export const cards = [
   {
-    imageName: moisturizing_mousse,
+    imageName: "moisturizing_mousse",
     subheadingText: 'Для нормальной кожи',
     headingText: 'Увлажняющий мусс',
     descriptionText: 'Глубоко увлажняют кожу лица, оставляя её мягкой и гладкой.',
@@ -14,7 +8,7 @@ export const cards = [
     composition: ['активные натуральные комплексы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты']
   },
   {
-    imageName: moisturizing_mask,
+    imageName: "moisturizing_mask",
     subheadingText: 'Для нормальной кожи',
     headingText: 'Увлажняющая маска',
     descriptionText: 'Способствует удерживанию влаги в верхних слоях кожи.',
@@ -22,7 +16,7 @@ export const cards = [
     composition: ['воски', 'минералы', 'масла']
   },
   {
-    imageName: showering_gel,
+    imageName: "showering_gel",
     subheadingText: 'Для нормальной кожи',
     headingText: 'Гель для умывания',
     descriptionText: 'Интенсивно очищает, не повреждает защитный барьер кожи.',
@@ -30,7 +24,7 @@ export const cards = [
     composition: ['минералы', 'витамины С, А, РР, В И Е', 'солнцезащитные компоненты']
   },
   {
-    imageName: gift_package_1,
+    imageName: "gift_package_1",
     subheadingText: 'Для нормальной кожи',
     headingText: 'Подарочный набор №1',
     descriptionText: 'Набор, состоящий из увлажняющего крема и маски.',
@@ -38,7 +32,7 @@ export const cards = [
     composition: ['воски', 'минералы', 'масла']
   },
   {
-    imageName: gift_package_5,
+    imageName: "gift_package_5",
     subheadingText: 'Для нормальной кожи',
     headingText: 'Подарочный набор №5',
     descriptionText: 'Весь набор средств Invisible symphony, крем, маска, мусс и гель для умывания.',
