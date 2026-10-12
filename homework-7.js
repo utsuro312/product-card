@@ -47,8 +47,8 @@ function showRacehorseOwner(racehorse) {
     owner = "Insel Racing Co. Ltd.";
     alert(`Лошадь ${racehorse} принадлежит ${owner}`);
   } else
-  if (racehorse === "Bereshit") {
-    owner = "Sunday Racing";
+  if (racehorse === "Lovcen") {
+    owner = "Forest Racing";
     alert(`Лошадь ${racehorse} принадлежит ${owner}`);
   } else
   alert("Скаковая лошадь отсутствует в базе данных.");
