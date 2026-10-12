@@ -1,7 +1,7 @@
 import { cards } from "./cards.js";
 
 const cardsNameDescription = cards.reduce((acc, item) => {
-  acc[`${item.headingText}`] ? acc[`${item.headingText}`].push(item.descriptionText) : acc[`${item.headingText}`] = item.descriptionText;
+  acc[`${item.headingText}`] = item.descriptionText;
   return acc;
 }, []);
 
