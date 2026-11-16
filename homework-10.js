@@ -16,7 +16,7 @@ function showUpCards() {
   if (cardCount >= 1 && cardCount <= 5) {
     cards.splice(0,cardCount).forEach(card => {
       const clone = cardTemplate.content.cloneNode(true);
-      const targetPath = `Images/${card.imageName}.png`
+      const targetPath = `Images/products/${card.imageName}.png`
 
       clone.querySelector('img').src = targetPath;
       clone.querySelector('.card__subheading').textContent = card.subheadingText;

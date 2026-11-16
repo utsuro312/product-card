@@ -10,6 +10,27 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="overlay"></div>
+  <div class="modal">
+    <div class="modal__header">
+      <h1>Регистрация</h1>
+      <button class="modal__close_modal"></button>
+    </div>
+   
+    <form class="modal__registration_form" action="">
+      <h2>Добро пожаловать!</h2>
+      <div><img src="Images\icons\user_icon.svg"><input type="text" name="name" placeholder="Имя" required></div>
+      <div><img src="Images\icons\user_icon.svg"><input type="text" name="surname" placeholder="Фамилия" required></div>
+      <div><img src="Images\icons\calendar_icon.svg"><input type="date" name="birthday" placeholder="Дата Рождения" required></div>
+      <div><img src="Images\icons\login_icon.svg"><input type="text" name="login" placeholder="Логин" required></div>
+      <div><img src="Images\icons\mail_icon.svg"><input type="email" name="email" placeholder="Почта" required></div>
+      <div><img src="Images\icons\password_icon.svg"><input type="password" onchange="passwordConfirmValidity()" name="password" class="password_input" placeholder="Пароль" required></div>
+      <div><img src="Images\icons\password_icon.svg"><input type="password" onchange="passwordConfirmValidity()" name="password_confirmation" class="password_confirmation" placeholder="Подтвердите Пароль" required></div>
+      <div class="divider_horizontal divider_horizontal__modal"></div>
+      <div class="modal__user_agreement"><input class="modal__user_agreement__checkbox" type="checkbox" name="agreement" required><h4>Вы согласны с <a href="">пользовательским соглашением</a></h4></div>
+      <button class="modal__submit" type="submit">Завершить Регистрацию</button>
+    </form>
+  </div>
   <div class="products">
     <h1 class="products__section_title">Выбери свой продукт</h1>
     <div class="products__list">
@@ -34,9 +55,39 @@
     <button class="button_panel__turnFirstCardPink_buttton">Покрасить первую карточку в розовый</button>  
     <button class="button_panel__newTabGoogle_buttton">Открыть Google в новой вкладке</button>
     <button class="button_panel__invertButtonColor_buttton">Инвертировать цвет кнопки</button>  
+    <button class="button_panel__registration_buttton">Регистрация</button>  
   </div>
+  <footer>
+    <div class="footer__navigation">
+      <div class="footer__navigation__section_left">
+        <h2>Product Cards</h2>
+        <h3>У Нас Самые Лучшие Продукты Для Кожи!</h3>
+        <img src="Images\icons\tg_icon.svg" alt="Ссылка Телеграмм">
+        <img src="Images\icons\vk_icon.svg" alt="Ссылка Вконтакте">
+      </div>
+      <div class="footer__navigation__section">
+        <h3>Подпишись на наши акции:</h3>
+        <form class="email_subscription" action="">
+          <input name="email" class="email_input" type="email" placeholder="Введи email..." required>
+          <div class="divider_vertical"></div>
+          <button type="submit">Подписаться</button>
+        </form>
+      </div>
+      <nav class="footer__navigation__section">
+        <h4>Быстрые ссылки</h4>
+        <ul>
+          <li>Главная</li>
+          <li>Магазин</li>
+          <li>Контакты</li>
+        </ul>
+      </nav>
+    </div>
+    <div class="divider_horizontal"></div>
+    <h3 class="footer__link">www.product-cards.com©all right reserve </h3>
+  </footer>
   <script type="module" src="./homework-9.js"></script>
   <script type="module" src="./cards.js"></script>
   <script type="module" src="./homework-10.js"></script>
+  <script src="./homework-11.js"></script>
 </body>
 </html>
